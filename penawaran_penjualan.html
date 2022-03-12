@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Accurate | Histori Akun</title>
+  <title>Accurate | Penawaran Penjualan</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -230,12 +230,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Histori Akun</h1>
+            <h1 class="m-0 text-dark">Penawaran Penjualan</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="bukubesar.html">Buku Besar</a></li>
-              <li class="breadcrumb-item active">histori akun</li>
+              <li class="breadcrumb-item"><a href="penjualan.html">Penjualan</a></li>
+              <li class="breadcrumb-item active">Penawaran Penjualan</li>
             </ol>
           </div>
         </div>
@@ -248,52 +248,64 @@
           <div class="col-md-12">
             <div class="card card-primary">
               <div class="card-header">
-
+                <button type="button" data-toggle="modal" data-target="#modal-add" class="btn btn-primary" name="button">+Tambah Data</button>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </div>
               </div>
               <div class="card-body">
-                <table id="histori" class="table table-bordered table-striped">
+                <table id="penawaran" class="table table-bordered table-striped">
                   <thead>
                   <tr>
                     <th>No</th>
+                    <th>Nomor</th>
                     <th>Tanggal</th>
-                    <th>No.sumber</th>
-                    <th>Tipe Transaksi</th>
+                    <th>Pelanggan</th>
                     <th>Keterangan</th>
-                    <th>Mutasi</th>
-                    <th>Tipe</th>
-                    <th>Saldo</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                    <th>Opsi</th>
                   </tr>
                   </thead>
                   <tbody>
                   <tr>
                     <td>1</td>
-                    <td>Tanggal</td>
-                    <td>No.sumber</td>
-                    <td>Tipe Transaksi</td>
-                    <td>Keterangan</td>
-                    <td>Mutasi</td>
-                    <td>Tipe</td>
-                    <td>Saldo</td>
+                    <td>nomor</td>
+                    <td>tgl</td>
+                    <td>pelanggan</td>
+                    <td>keterangan</td>
+                    <td>status</td>
+                    <td>total</td>
+                    <td>
+                      <button data-toggle="modal" data-target="#modal-edit" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
+                      <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
+                    </td>
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td>Tanggal</td>
-                    <td>No.sumber</td>
-                    <td>Tipe Transaksi</td>
-                    <td>Keterangan</td>
-                    <td>Mutasi</td>
-                    <td>Tipe</td>
-                    <td>Saldo</td>
+                    <td>nomor</td>
+                    <td>tgl</td>
+                    <td>pelanggan</td>
+                    <td>keterangan</td>
+                    <td>status</td>
+                    <td>total</td>
+                    <td>
+                      <button data-toggle="modal" data-target="#modal-edit" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
+                      <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
+                    </td>
                   </tr>
                   <tr>
                     <td>3</td>
-                    <td>Tanggal</td>
-                    <td>No.sumber</td>
-                    <td>Tipe Transaksi</td>
-                    <td>Keterangan</td>
-                    <td>Mutasi</td>
-                    <td>Tipe</td>
-                    <td>Saldo</td>
+                    <td>nomor</td>
+                    <td>tgl</td>
+                    <td>pelanggan</td>
+                    <td>keterangan</td>
+                    <td>status</td>
+                    <td>total</td>
+                    <td>
+                      <button data-toggle="modal" data-target="#modal-edit" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
+                      <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
+                    </td>
                   </tr>
                 </table>
               </div>
@@ -305,7 +317,7 @@
           <div class="modal-dialog-full-width modal-dialog momodel modal-fluid">
             <div class="modal-content modal-content-full-width">
               <div class="modal-header modal-header-full-width text-center">
-                <h4 class="modal-title">Tambah Data Pencatatan Beban</h4>
+                <h4 class="modal-title">Tambah Data Penawaran Penjualan</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -317,9 +329,9 @@
                     <div class="row">
                       <div class="col-5">
                         <div class="form-group row">
-                          <label for="diskon" class="col-sm-4 col-form-label">Hutang Beban</label>
+                          <label for="diskon" class="col-sm-4 col-form-label">Dipesan Oleh</label>
                           <div class="col-sm-6 input-group">
-                            <input type="text" class="form-control" id="hutang" placeholder="...">
+                            <input type="text" class="form-control" id="dipesan" placeholder="...">
                             <div class="input-group-append">
                               <span class="input-group-text">
                                 %
@@ -328,81 +340,119 @@
                           </div>
                         </div>
                           <div class="form-group row">
-                            <label for="pajak" class="col-sm-4 col-form-label">Tanggal</label>
+                            <label for="tgl" class="col-sm-4 col-form-label">Tanggal</label>
                             <div class="col-sm-6">
-                              <input type="text" name="tanggal" class="form-control" id="tanggal" placeholder="">
+                              <input type="text" name="tgl" class="form-control" id="tgl" placeholder="">
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label for="bayarpotong" class="col-sm-4 col-form-label">Nomor Beban</label>
+                            <label for="bayarpotong" class="col-sm-4 col-form-label">Nomor #</label>
                             <div class="col-sm-1">
                               <button type="button" class="btn btn-sm btn-secondary"><span class="fas fa-pen"></span></button>
                             </div>
                             <div class="col-sm-5">
                               <select class="form-control" name="tipepajak">
                                 <option value="">Pencatatan Beban</option>
-
                               </select>
                             </div>
                           </div>
+
                           <div class="form-group row">
-                            <label for="pajak" class="col-sm-4 col-form-label">Jatuh Tempo</label>
-                            <div class="col-sm-6">
-                              <input type="text" name="tempo" class="form-control" id="tempo" placeholder="...">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <div class="col-sm-2 offset-6">
-                              <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapseExample">
-                                Ambil
-                              </button>
-                              <div class="collapse" id="collapse1">
-                                <div class="card">
-                                  <a href="#">Favorit</a>
+                            <div class="col-sm-8">
+                              <div class="input-group">
+                                <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="exampleInputFile">
+                                  <label class="custom-file-label" for="exampleInputFile">Dokumen</label>
                                 </div>
-                              </div>
-                            </div>
-                            <div class="col-sm-3">
-                              <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapseExample">
-                                Proses
-                              </button>
-                              <div class="collapse" id="collapse2">
-                                <div class="card">
-                                  <a href="#">Pembayaran</a>
+                                <div class="input-group-append">
+                                  <span class="input-group-text" id=""><i class="fas fa-file"></i></span>
                                 </div>
                               </div>
                             </div>
 
                           </div>
+                          <div class="form-group row">
+                            <div class="col-sm-3">
+                              <div class="btn-group ml-2">
+                                <button type="button" class="btn btn-success">Ambil</i></button>
+                                <button type="button" class="btn btn-success dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                                  <span class="sr-only">Toggle Dropdown</span>
+                                  <div class="dropdown-menu" role="menu">
+                                    <a class="dropdown-item" href="#">Favorit</a>
+
+                                  </div>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="col-sm-3">
+                              <div class="btn-group ml-2">
+                                <button type="button" class="btn btn-info">Proses</i></button>
+                                <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                                  <span class="sr-only">Toggle Dropdown</span>
+                                  <div class="dropdown-menu" role="menu">
+                                    <a class="dropdown-item" href="#">Pesanan</a>
+                                    <a class="dropdown-item" href="#">Pengiriman</a>
+                                    <a class="dropdown-item" href="#">Faktur</a>
+                                  </div>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+
                           <div class="card-footer">
                             <button type="button" class="btn btn-primary">Save</button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                           </div>
                       </div>
                       <div class="col-7">
-                          <table id="akun" class="table table-bordered table-striped">
+                          <table id="akun" class="table table-bordered">
                             <thead>
                             <tr>
                               <th>No</th>
-                              <th>Nomor</th>
-                              <th>Tanggal</th>
+                              <th>Nama Barang</th>
+                              <th>Kode</th>
+                              <th>Kuantitas</th>
+                              <th>Satuan</th>
+                              <th>Harga</th>
+                              <th>Diskon</th>
+                              <th>Total Harga</th>
+                              <th>Pajak</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
                               <td>1</td>
-                              <td>nomor</td>
-                              <td>tgl</td>
+                              <td>Nama Barang</td>
+                              <td>Kode</td>
+                              <td>Kuantitas</td>
+                              <td>Satuan</td>
+                              <td>Harga</td>
+                              <td>Diskon</td>
+                              <td>Total Harga</td>
+                              <td>Pajak</td>
                             </tr>
                             <tr>
                               <td>2</td>
-                              <td>nomor</td>
-                              <td>tgl</td>
+                              <td>Nama Barang</td>
+                              <td>Kode</td>
+                              <td>Kuantitas</td>
+                              <td>Satuan</td>
+                              <td>Harga</td>
+                              <td>Diskon</td>
+                              <td>Total Harga</td>
+                              <td>Pajak</td>
                             </tr>
                             <tr>
                               <td>3</td>
-                              <td>nomor</td>
-                              <td>tgl</td>
+                              <td>Nama Barang</td>
+                              <td>Kode</td>
+                              <td>Kuantitas</td>
+                              <td>Satuan</td>
+                              <td>Harga</td>
+                              <td>Diskon</td>
+                              <td>Total Harga</td>
+                              <td>Pajak</td>
                             </tr>
                           </table>
 
@@ -539,6 +589,8 @@
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
 <script src="plugins/datatables/jquery.dataTables.js"></script>
+<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
@@ -546,8 +598,7 @@
 <script src="dist/js/demo.js"></script>
 <script src="plugins/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
 <script type="text/javascript">
-
-jQuery('#tanggal').datetimepicker({
+jQuery('#tgl').datetimepicker({
   timepicker:false
 });
 
@@ -556,8 +607,17 @@ jQuery('#tempo').datetimepicker({
 });
 
 $(function () {
+  $("#penawaran").DataTable({
+    dom: 'Bfrtip',
+        buttons: [
+            'print'
+        ],
+        'bFilter': true
 
-  $("#histori").DataTable();
+
+
+  });
+  $("#akun").DataTable();
 
 });
 

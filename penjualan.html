@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Accurate | Proses Akhir Bulan</title>
+  <title>Accurate | Penjualan</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -194,174 +194,144 @@
               <p> Daftar Laporan</p>
             </a>
           </li>
-
         </ul>
       </nav>
     </div>
-
   </aside>
 
+  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Proses Akhir Bulan</h1>
-          </div>
+            <h1 class="m-0 text-dark">Penjualan</h1>
+          </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="perusahaan.html">Perusahaan</a></li>
-              <li class="breadcrumb-item active">proses akhir bulan</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
+              <li class="breadcrumb-item"><a href="dashboard.html">Penjualan</a></li>
 
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
+        <div class="row mb-3">
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-block btn-outline-danger btn-lg">
+                <a href="penawaran_penjualan.html" style="color:#dc3545;" onMouseOut="this.style.color='#dc3545'" onMouseOver="this.style.color='#FFF'">
+                Penawaran<br> penjualan
+                </a>
+                <i class="fas fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-block btn-outline-danger btn-lg">
+                <a href="pesanan_penjualan.html" style="color:#dc3545;" onMouseOut="this.style.color='#dc3545'" onMouseOver="this.style.color='#FFF'">
+                Pesanan<br> penjualan
+                </a>
+                <i class="fas fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-block btn-outline-danger btn-lg">
+                <a href="pengiriman_pesanan.html" style="color:#dc3545;" onMouseOut="this.style.color='#dc3545'" onMouseOver="this.style.color='#FFF'">
+                Pengiriman <br>Pesanan
+                </a>
+                <i class="fas fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-block btn-outline-danger btn-lg">
+                <a href="uangmuka_Penjualan.html" style="color:#dc3545;" onMouseOut="this.style.color='#dc3545'" onMouseOver="this.style.color='#FFF'">
+                Uang Muka <br>Penjualan
+                </a>
+                <i class="fas fa-bookmark"></i>
+              </button>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-block btn-outline-danger btn-lg">
+                <a href="faktur_penjualan.html" style="color:#dc3545;" onMouseOut="this.style.color='#dc3545'" onMouseOver="this.style.color='#FFF'">
+                Faktur<br> Penjualan
+                </a>
+                <i class="fas fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-block btn-outline-danger btn-lg">
+                <a href="penerimaan_penjualan.html" style="color:#dc3545;" onMouseOut="this.style.color='#dc3545'" onMouseOver="this.style.color='#FFF'">
+                Penerimaan<br> Penjualan
+                </a>
+                <i class="fas fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-block btn-outline-danger btn-lg">
+                <a href="retur_penjualan.html" style="color:#dc3545;" onMouseOut="this.style.color='#dc3545'" onMouseOver="this.style.color='#FFF'">
+                Retur<br> Penjualan
+                </a>
+                <i class="fas fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-block btn-outline-danger btn-lg">
+                <a href="tukar_faktur.html" style="color:#dc3545;" onMouseOut="this.style.color='#dc3545'" onMouseOver="this.style.color='#FFF'">
+                Tukar<br> Faktur
+                </a>
+                <i class="fas fa-bookmark"></i>
+              </button>
+            </div>
+        </div>
         <div class="row">
-          <div class="col-md-12">
-            <div class="card card-primary">
-              <div class="card-header">
-                <button type="button" data-toggle="modal" data-target="#modal-addproses" class="btn btn-primary" name="button">+Tambah Data</button>
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                </div>
-              </div>
-              <div class="card-body">
-                <table id="transaksi" class="table table-bordered table-striped">
-                  <thead>
-                  <tr>
-                    <th>No</th>
-                    <th>Nama</th>
-                    <th>Tgl Input</th>
-                    <th>Keterangan</th>
-                    <th>Opsi</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Nama</td>
-                    <td>tgl</td>
-                    <td>keterangan</td>
-                    <td>
-                      <button data-toggle="modal" data-target="#modal-editproses" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
-                      <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Nama</td>
-                    <td>tgl</td>
-                    <td>keterangan</td>
-                    <td>
-                      <button data-toggle="modal" data-target="#modal-editproses" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
-                      <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Nama</td>
-                    <td>tgl</td>
-                    <td>keterangan</td>
-                    <td>
-                      <button data-toggle="modal" data-target="#modal-editproses" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
-                      <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
-                    </td>
-                  </tr>
-                </table>
-              </div>
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-block btn-outline-danger btn-lg">
+                <a href="pelanggan.html" style="color:#dc3545;" onMouseOut="this.style.color='#dc3545'" onMouseOver="this.style.color='#FFF'">
+                Pelanggan
+                </a>
+                <i class="fas fa-bookmark"></i>
+              </button>
             </div>
-          </div>
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-block btn-outline-danger btn-lg">
+                <a href="penerimaan_penjualan.html" style="color:#dc3545;" onMouseOut="this.style.color='#dc3545'" onMouseOver="this.style.color='#FFF'">
+                Penyesuaian Harga/Diskon
+                </a>
+                <i class="fas fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-block btn-outline-danger btn-lg">
+                <a href="komisi_penjual.html" style="color:#dc3545;" onMouseOut="this.style.color='#dc3545'" onMouseOver="this.style.color='#FFF'">
+                Komisi<br> Penjual
+                </a>
+                <i class="fas fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-block btn-outline-danger btn-lg">
+                <a href="tukar_faktur.html" style="color:#dc3545;" onMouseOut="this.style.color='#dc3545'" onMouseOver="this.style.color='#FFF'">
+                Target<br> Penjualan
+                </a>
+                <i class="fas fa-bookmark"></i>
+              </button>
+            </div>
         </div>
 
-        <div class="modal fade" id="modal-addproses">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title">Tambah Data Proses Akhir Bulan</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <form class="form-horizontal">
-                  <div class="card-body">
-                    <div class="form-group row">
-                      <label for="keteranganpajak" class="col-sm-4 col-form-label">Nama</label>
-                      <div class="col-sm-8">
-                        <input type="text" name="nama" class="form-control" id="nama" placeholder="kategori">
-                      </div>
-                    </div>
-
-                    <div class="form-group row">
-                      <label for="tglinput" class="col-sm-4 col-form-label">Tgl Input</label>
-                      <div class="col-sm-8">
-                        <input type="text" name="tglinput" class="form-control" id="tglinput" placeholder="Tgl.Input">
-                      </div>
-                    </div>
-
-                    <div class="form-group row">
-                      <label for="keteranganpajak" class="col-sm-4 col-form-label">Keterangan</label>
-                      <div class="col-sm-8">
-                        <input type="text" name="keterangan" class="form-control" id="keterangan" placeholder="keterangan">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-footer">
-                    <button type="button" class="btn btn-primary">Save</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal fade" id="modal-editproses">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title">Tambah Data Proses Akhir Bulan</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <form class="form-horizontal">
-                  <div class="card-body">
-                    <div class="form-group row">
-                      <label for="keteranganpajak" class="col-sm-4 col-form-label">Nama</label>
-                      <div class="col-sm-8">
-                        <input type="text" name="nama" class="form-control" id="nama" placeholder="kategori">
-                      </div>
-                    </div>
-
-                    <div class="form-group row">
-                      <label for="keteranganpajak" class="col-sm-4 col-form-label">Keterangan</label>
-                      <div class="col-sm-8">
-                        <input type="text" name="keterangan" class="form-control" id="keterangan" placeholder="keterangan">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-footer">
-                    <button type="button" class="btn btn-primary">Save</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
-
+    <!-- /.content -->
   </div>
-
+  <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>2020 <a href="#">PT.XYZ</a>.</strong>
+    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.0.1
@@ -406,25 +376,9 @@
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
-<script src="plugins/datatables/jquery.dataTables.js"></script>
-<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
-<script src="plugins/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
-<script type="text/javascript">
-jQuery('#tglinput').datetimepicker({
-  timepicker:false,
-  format:'d/m/Y'
-});
-
-$(function () {
-  $("#proses").DataTable();
-
-  });
-
-
-</script>
 </body>
 </html>
