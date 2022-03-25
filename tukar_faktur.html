@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Accurate | Pesanan Penjualan</title>
+  <title>Accurate | Tukar Faktur</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -230,12 +230,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Pesanan Penjualan</h1>
+            <h1 class="m-0 text-dark">Tukar Faktur</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="penjualan.html">Penjualan</a></li>
-              <li class="breadcrumb-item active">Pesanan Penjualan</li>
+              <li class="breadcrumb-item active">Tukar Faktur</li>
             </ol>
           </div>
         </div>
@@ -254,28 +254,28 @@
                 </div>
               </div>
               <div class="card-body">
-                <table id="penawaran" class="table table-bordered table-striped">
+                <table id="retur" class="table table-bordered table-striped">
                   <thead>
                   <tr>
                     <th>No</th>
-                    <th>Nomor</th>
-                    <th>Tanggal</th>
                     <th>Pelanggan</th>
-                    <th>Keterangan</th>
+                    <th>Tanggal</th>
+                    <th>Tgl.Tukar</th>
+                    <th>Nomor</th>
                     <th>Status</th>
-                    <th>Total</th>
+                    <th>Total Faktur</th>
                     <th>Opsi</th>
                   </tr>
                   </thead>
                   <tbody>
                   <tr>
                     <td>1</td>
-                    <td>nomor</td>
-                    <td>tgl</td>
-                    <td>pelanggan</td>
-                    <td>keterangan</td>
-                    <td>status</td>
-                    <td>total</td>
+                    <td>Pelanggan</td>
+                    <td>Tanggal</td>
+                    <td>Tgl.Tukar</td>
+                    <td>Nomor</td>
+                    <td>Status</td>
+                    <td>total faktur</td>
                     <td>
                       <button data-toggle="modal" data-target="#modal-edit" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
                       <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
@@ -283,12 +283,12 @@
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td>nomor</td>
-                    <td>tgl</td>
-                    <td>pelanggan</td>
-                    <td>keterangan</td>
-                    <td>status</td>
-                    <td>total</td>
+                    <td>Pelanggan</td>
+                    <td>Tanggal</td>
+                    <td>Tgl.Tukar</td>
+                    <td>Nomor</td>
+                    <td>Status</td>
+                    <td>total faktur</td>
                     <td>
                       <button data-toggle="modal" data-target="#modal-edit" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
                       <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
@@ -296,12 +296,12 @@
                   </tr>
                   <tr>
                     <td>3</td>
-                    <td>nomor</td>
-                    <td>tgl</td>
-                    <td>pelanggan</td>
-                    <td>keterangan</td>
-                    <td>status</td>
-                    <td>total</td>
+                    <td>Pelanggan</td>
+                    <td>Tanggal</td>
+                    <td>Tgl.Tukar</td>
+                    <td>Nomor</td>
+                    <td>Status</td>
+                    <td>total faktur</td>
                     <td>
                       <button data-toggle="modal" data-target="#modal-edit" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
                       <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
@@ -317,7 +317,7 @@
           <div class="modal-dialog-full-width modal-dialog momodel modal-fluid">
             <div class="modal-content modal-content-full-width">
               <div class="modal-header modal-header-full-width text-center">
-                <h4 class="modal-title">Tambah Data Pesanan Penjualan</h4>
+                <h4 class="modal-title">Tambah Data Tukar Faktur</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -329,134 +329,113 @@
                     <div class="row">
                       <div class="col-5">
                         <div class="form-group row">
-                          <label for="diskon" class="col-sm-4 col-form-label">Dipesan Oleh</label>
-                          <div class="col-sm-6 input-group">
-                            <input type="text" class="form-control" id="dipesan" placeholder="...">
-                            <div class="input-group-append">
-                              <span class="input-group-text">
-                                %
-                              </span>
+                          <label for="bayarpotong" class="col-sm-4 col-form-label">Mata Uang</label>
+                          <div class="col-sm-5">
+                            <select class="form-control" name="tipepajak">
+                              <option value="">Indonesia Rupiah</option>
+                              <option value="">US Dollar</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="tgl" class="col-sm-4 col-form-label">Tanggal Tukar</label>
+                          <div class="col-sm-6">
+                            <input type="text" name="tgl_tukar" class="form-control" id="tgl" placeholder="">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="tgl" class="col-sm-4 col-form-label">Jatuh Tempo</label>
+                          <div class="col-sm-6">
+                            <input type="text" name="jatuh_tempo" class="form-control" id="jatuh_tempo" placeholder="">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="bayarpotong" class="col-sm-4 col-form-label">Nomor #</label>
+                          <div class="col-sm-1">
+                            <button type="button" class="btn btn-sm btn-secondary"><span class="fas fa-pen"></span></button>
+                          </div>
+                          <div class="col-sm-5">
+                            <select class="form-control" name="tukar_faktur">
+                              <option value="">Tkar Faktur</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="tgl" class="col-sm-4 col-form-label">Tgl.Dokumen</label>
+                          <div class="col-sm-6">
+                            <input type="text" name="tgl_dokumen" class="form-control" id="tgl_dokumen" placeholder="">
+                          </div>
+                        </div>
+
+
+
+
+                        <div class="form-group row">
+                          <div class="col-sm-8">
+                            <div class="input-group">
+                              <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="exampleInputFile">
+                                <label class="custom-file-label" for="exampleInputFile">Dokumen</label>
+                              </div>
+                              <div class="input-group-append">
+                                <span class="input-group-text" id=""><i class="fas fa-file"></i></span>
+                              </div>
                             </div>
                           </div>
                         </div>
-                          <div class="form-group row">
-                            <label for="pajak" class="col-sm-4 col-form-label">Tanggal</label>
-                            <div class="col-sm-6">
-                              <input type="text" name="tanggal" class="form-control" id="tanggal" placeholder="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="bayarpotong" class="col-sm-4 col-form-label">Nomor #</label>
-                            <div class="col-sm-1">
-                              <button type="button" class="btn btn-sm btn-secondary"><span class="fas fa-pen"></span></button>
-                            </div>
-                            <div class="col-sm-5">
-                              <select class="form-control" name="tipepajak">
-                                <option value="">Pencatatan Beban</option>
-                              </select>
-                            </div>
-                          </div>
 
-                          <div class="form-group row">
-                            <div class="col-sm-8">
-                              <div class="input-group">
-                                <div class="custom-file">
-                                  <input type="file" class="custom-file-input" id="exampleInputFile">
-                                  <label class="custom-file-label" for="exampleInputFile">Dokumen</label>
-                                </div>
-                                <div class="input-group-append">
-                                  <span class="input-group-text" id=""><i class="fas fa-file"></i></span>
-                                </div>
-                              </div>
-                            </div>
-
-                          </div>
-                          <div class="form-group row">
-                            <div class="col-sm-3">
-                              <div class="btn-group ml-2">
-                                <button type="button" class="btn btn-success">Ambil</i></button>
-                                <button type="button" class="btn btn-default dropdown-toggle dropdown-icon" data-toggle="dropdown">
-                                  <span class="sr-only">Toggle Dropdown</span>
-                                  <div class="dropdown-menu" role="menu">
-                                    <a class="dropdown-item" href="#">Favorit</a>
-
-                                  </div>
-                                </button>
-                              </div>
-                            </div>
-                            <div class="col-sm-3">
-                              <div class="btn-group ml-2">
-                                <button type="button" class="btn btn-info">Proses</i></button>
-                                <button type="button" class="btn btn-default dropdown-toggle dropdown-icon" data-toggle="dropdown">
-                                  <span class="sr-only">Toggle Dropdown</span>
-                                  <div class="dropdown-menu" role="menu">
-                                    <a class="dropdown-item" href="#">Pesanan</a>
-                                    <a class="dropdown-item" href="#">Pengiriman</a>
-                                    <a class="dropdown-item" href="#">Faktur</a>
-                                  </div>
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-
-
-                          <div class="card-footer">
-                            <button type="button" class="btn btn-primary">Save</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                          </div>
+                        <div class="card-footer">
+                          <button type="button" class="btn btn-primary">Save</button>
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
                       </div>
                       <div class="col-7">
                           <table id="akun" class="table table-bordered">
                             <thead>
                             <tr>
                               <th>No</th>
-                              <th>Nama Barang</th>
-                              <th>Kode</th>
-                              <th>Kuantitas</th>
-                              <th>Satuan</th>
-                              <th>Harga</th>
-                              <th>Diskon</th>
-                              <th>Total Harga</th>
-                              <th>Pajak</th>
+                              <th>Pelanggan</th>
+                              <th>No.Faktur</th>
+                              <th>TglFaktur</th>
+                              <th>Jatuh Tempo</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
                               <td>1</td>
-                              <td>Nama Barang</td>
-                              <td>Kode</td>
-                              <td>Kuantitas</td>
-                              <td>Satuan</td>
-                              <td>Harga</td>
-                              <td>Diskon</td>
-                              <td>Total Harga</td>
-                              <td>Pajak</td>
+                              <td>Pelanggan</td>
+                              <td>No.Faktur</td>
+                              <td>TglFaktur</td>
+                              <td>Jatuh Tempo</td>
                             </tr>
                             <tr>
                               <td>2</td>
-                              <td>Nama Barang</td>
-                              <td>Kode</td>
-                              <td>Kuantitas</td>
-                              <td>Satuan</td>
-                              <td>Harga</td>
-                              <td>Diskon</td>
-                              <td>Total Harga</td>
-                              <td>Pajak</td>
+                              <td>Pelanggan</td>
+                              <td>No.Faktur</td>
+                              <td>TglFaktur</td>
+                              <td>Jatuh Tempo</td>
                             </tr>
                             <tr>
                               <td>3</td>
-                              <td>Nama Barang</td>
-                              <td>Kode</td>
-                              <td>Kuantitas</td>
-                              <td>Satuan</td>
-                              <td>Harga</td>
-                              <td>Diskon</td>
-                              <td>Total Harga</td>
-                              <td>Pajak</td>
+                              <td>Pelanggan</td>
+                              <td>No.Faktur</td>
+                              <td>TglFaktur</td>
+                              <td>Jatuh Tempo</td>
                             </tr>
                           </table>
+                          <div class="form-group row">
+                            <div class="col-sm-4">
+                              <div class="card card-outline card-primary">
+                                <div class="card-header ">
+                                  Total Faktur<br>
+                                  30000
+                                </div>
+                              </div>
+                            </div>
 
+                          </div>
                       </div>
+
                     </div>
                     </form>
 
@@ -598,7 +577,9 @@
 <script src="dist/js/demo.js"></script>
 <script src="plugins/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
 <script type="text/javascript">
-jQuery('#tanggal').datetimepicker();
+jQuery('#tgl').datetimepicker({
+  timepicker:false
+});
 
 jQuery('#tempo').datetimepicker({
   timepicker:false
