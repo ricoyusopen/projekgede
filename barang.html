@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Accurate | Pemasok</title>
+  <title>Accurate | Pelanggan</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -230,12 +230,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Pemasok</h1>
+            <h1 class="m-0 text-dark">Barang</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="pembelian.html">Pembelian</a></li>
-              <li class="breadcrumb-item active">Pemasok</li>
+              <li class="breadcrumb-item"><a href="persediaan.html">Persediaan</a></li>
+              <li class="breadcrumb-item active">Barang</li>
             </ol>
           </div>
         </div>
@@ -248,14 +248,15 @@
           <div class="col-md-12">
             <ul class="nav nav-tabs">
               <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#kategori">Katgeori Pemasok</a>
+                <a class="nav-link active" data-toggle="tab" href="#kategori">Kategori Barang</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#pemasok">Pemasok</a>
+                <a class="nav-link" data-toggle="tab" href="#satuan">Satuan Barang</a>
               </li>
-
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#barangjasa">Barang & Jasa</a>
+              </li>
             </ul>
-
             <!-- Tab panes -->
             <div class="tab-content">
               <div class="tab-pane container active" id="kategori">
@@ -271,8 +272,8 @@
                       <thead>
                       <tr>
                         <th>No</th>
-                        <th>Nama Kategori</th>
-                        <th>Kategor Default</th>
+                        <th>Nama</th>
+                        <th>Kategori Default</th>
                         <th>Opsi</th>
                       </tr>
                       </thead>
@@ -291,10 +292,40 @@
                   </div>
                 </div>
               </div>
-              <div class="tab-pane container fade" id="pemasok">
+              <div class="tab-pane container fade" id="satuan">
                 <div class="card card-primary">
                   <div class="card-header">
-                    <button type="button" data-toggle="modal" data-target="#modal-addpemasok" class="btn btn-primary" name="button">+Tambah Data</button>
+                    <button type="button" data-toggle="modal" data-target="#modal-addsatuan" class="btn btn-primary" name="button">+Tambah Data</button>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <table id="satuan" class="table table-bordered table-striped">
+                      <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Satuan</th>
+                        <th>Opsi</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>...</td>
+                        <td>
+                          <button data-toggle="modal" data-target="#modal-editkategori" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
+                          <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane container fade" id="barangjasa">
+                <div class="card card-primary">
+                  <div class="card-header">
+                    <button type="button" data-toggle="modal" data-target="#modal-addbarangjasa" class="btn btn-primary" name="button">+Tambah Data</button>
                     <div class="card-tools">
                       <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
                     </div>
@@ -304,22 +335,26 @@
                       <thead>
                       <tr>
                         <th>No</th>
-                        <th>Nama</th>
-                        <th>Kontak Utama</th>
-                        <th>ID Pemasok</th>
-                        <th>Saldo</th>
+                        <th>Nama Barang</th>
+                        <th>Kode Barang</th>
+                        <th>Jenis Barang</th>
+                        <th>Satuan</th>
+                        <th>Kts(Gdng Pengguna)</th>
+                        <th>Stock</th>
                         <th>Opsi</th>
                       </tr>
                       </thead>
                       <tbody>
                       <tr>
                         <td>2</td>
-                        <td>Nama</td>
-                        <td>Kontak Utama</td>
-                        <td>ID Pemasok</td>
-                        <td>Saldo</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
                         <td>
-                          <button data-toggle="modal" data-target="#modal-editpemasok" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
+                          <button data-toggle="modal" data-target="#modal-editpelanggan" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
                           <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
                         </td>
                       </tr>
@@ -327,17 +362,15 @@
                   </div>
                 </div>
               </div>
-
             </div>
-
           </div>
         </div>
 
-        <div class="modal fade right" id="modal-addpemasok">
+        <div class="modal fade right" id="modal-addbarangjasa">
           <div class="modal-dialog-full-width modal-dialog momodel modal-fluid">
             <div class="modal-content modal-content-full-width">
               <div class="modal-header modal-header-full-width text-center">
-                <h4 class="modal-title">Tambah Data Pemasok</h4>
+                <h4 class="modal-title">Tambah Data</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -349,21 +382,20 @@
                       <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" href="#umum">Umum</a>
                       </li>
-
                       <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#kontak">Kontak</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#pembelian">Pembelian</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#pajak">Pajak</a>
+                        <a class="nav-link" data-toggle="tab" href="#penjualanpembelian">Penjualan/Pembelian</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#saldo">Saldo</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#lain2">Lain-lain</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#akun">Akun</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#gambar">Gambar</a>
                       </li>
                     </ul>
                   </div>
@@ -375,83 +407,75 @@
                           <div class="row">
                             <div class="col-6">
                               <div class="form-group row">
-                                <label for="idpelanggan" class="col-sm-4 col-form-label">ID Pelanggan</label>
-                                <div class="col-sm-6">
-                                  <input type="text" name="id_pealnggan" class="form-control" id="id_pealnggan" placeholder="ID Pelanggan">
+                                <label for="nama" class="col-sm-4 col-form-label">Kategori Barang</label>
+                                <div class="col-sm-5">
+                                  <div class="mb-3 input-group">
+                                    <input type="text" class="form-control" id="kat_barang" placeholder="...">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text">
+                                        <i class="fa fa-search"></i>
+                                      </span>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label for="nama" class="col-sm-4 col-form-label">Nama</label>
-                                <div class="col-sm-6">
-                                  <input type="text" name="nama" class="form-control" id="nama" placeholder="nama lengkap">
+                                <label for="bayarpotong" class="col-sm-4 col-form-label">Nomor #</label>
+                                <div class="col-sm-5">
+                                  <select class="form-control" name="tipepajak">
+                                    <option value="">Barang & Jasa</option>
+                                  </select>
+                                </div>
+                                <div class="col-sm-1">
+                                  <button type="button" class="btn btn-sm btn-secondary"><span class="fas fa-pen"></span></button>
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label for="posisi" class="col-sm-4 col-form-label">Email</label>
-                                <div class="col-sm-6">
-                                  <input type="text" name="posisi" class="form-control" id="posisi" placeholder="posisi/jabatan">
+                                <label for="posisi" class="col-sm-4 col-form-label">Nama Barang</label>
+                                <div class="col-sm-5">
+                                  <input type="text" name="nmbarang" class="form-control" id="posisi" placeholder="Nama Barang">
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label for="email" class="col-sm-4 col-form-label">No.Telp Bisnis</label>
-                                <div class="col-sm-6">
-                                  <input type="text" class="form-control" id="tlp" placeholder="tlp">
+                                <label for="bayarpotong" class="col-sm-4 col-form-label">Jenis Barang</label>
+                                <div class="col-sm-5">
+                                  <select class="form-control" name="jenibarang">
+                                    <option value="">Persediaan</option>
+                                  </select>
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label for="website" class="col-sm-4 col-form-label">Handphone</label>
-                                <div class="col-sm-6">
-                                  <input type="text" class="form-control" id="hp" placeholder="no.hp">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="website" class="col-sm-4 col-form-label">No.Whatsapp</label>
-                                <div class="col-sm-6">
-                                  <input type="text" class="form-control" id="wa" placeholder="whatsapp">
+                                <label for="nama" class="col-sm-4 col-form-label">Satuan</label>
+                                <div class="col-sm-5">
+                                  <div class="mb-3 input-group">
+                                    <input type="text" class="form-control" id="kat_barang" placeholder="...">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text">
+                                        <i class="fa fa-search"></i>
+                                      </span>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-group row">
-                                <label for="website" class="col-sm-4 col-form-label">Faksimili</label>
-                                <div class="col-sm-6">
-                                  <input type="text" class="form-control" id="fax" placeholder="fakksmili">
+                                <label for="bayarpotong" class="col-sm-4 col-form-label">Dipakai Cabang</label>
+                                <div class="col-sm-5">
+                                  <select class="form-control" name="jenibarang">
+                                    <option value="">Kantor Pusat</option>
+                                  </select>
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label for="website" class="col-sm-4 col-form-label">Website</label>
-                                <div class="col-sm-6">
-                                  <input type="text" class="form-control" id="wa" placeholder="whatsapp">
+                                <label for="website" class="col-sm-4 col-form-label">UPC/Barcode</label>
+                                <div class="col-sm-5">
+                                  <input type="text" class="form-control" id="ups" placeholder="UPC">
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label for="website" class="col-sm-4 col-form-label">Mata Uang Utama</label>
-                                <div class="col-sm-6">
-                                  <input type="text" class="form-control" name="matauang" id="matauang" placeholder="matauang">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="bayarpotong" class="col-sm-4 col-form-label">Alamat Penagihan</label>
-                                <div class="col-sm-6">
-                                  <textarea class="form-control" id="alamat" name="alamat"></textarea>
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <div class="col-sm-3 offset-4">
-                                  <input type="text" class="form-control" id="kota" name="kota" placeholder="kota">
-                                </div>
-                                <div class="col-sm-3">
-                                  <input type="text" class="form-control" id="kodepos" name="kodepos" placeholder="kode pos">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <div class="col-sm-6 offset-4">
-                                  <input type="text" class="form-control" id="kota" name="propinsi" placeholder="propinsi">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <div class="col-sm-6 offset-4">
-                                  <input type="text" class="form-control" id="negara" name="negara" placeholder="negara">
+                                <div class="col-sm-4 ">
+                                  <label> <input type="checkbox" id="default"> Substitusi dengan</label>
                                 </div>
                               </div>
                             </div>
@@ -468,8 +492,140 @@
                           </div>
                         </form>
                       </div>
+                      <div class="tab-pane container fade" id="penjualanpembelian">
+                        <form class="form-horizontal">
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="form-group row">
+                                <div class="col-sm-10">
+                                  <label for="idpelanggan" class="col-form-label"><input type="checkbox" name="sama" id="sama"> Sama Dengan Alamat Penagihan</label>
+                                  <textarea type="text" class="form-control" name="almt" class="form-control" id="almt"></textarea>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="nama" class="col-sm-2 col-form-label">Kota</label>
+                                <div class="col-sm-3">
+                                  <input type="text" name="kota" class="form-control" id="kota" placeholder="kota">
+                                </div>
+                                <label for="nama" class="col-sm-2 col-form-label">Kode Pos</label>
+                                <div class="col-sm-3">
+                                  <input type="text" name="kodepos" class="form-control" id="kodepos" placeholder="kode pos">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="posisi" class="col-sm-2 col-form-label">Propinsi</label>
+                                <div class="col-sm-8">
+                                  <input type="text" name="posisi" class="form-control" id="posisi" placeholder="posisi/jabatan">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="email" class="col-sm-2 col-form-label">Negara</label>
+                                <div class="col-sm-8">
+                                  <input type="text" class="form-control" id="negara" placeholder="negara">
+                                </div>
+                              </div>
 
-                      <div class="tab-pane container fade" id="kontak">
+                            </div>
+                            <div class="col-6">
+                              <button type="button" data-toggle="modal" data-target="#modal-add" class="btn btn-sm btn-secondary" name="button">+Tambah Data</button>
+                              <table id="akun" class="table table-bordered">
+                                <thead>
+                                <tr>
+                                  <th>Alamat</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                  <td>...</td>
+                                </tr>
+                              </table>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane container fade" id="saldo">
+                        <div class="form-group row">
+                          <button type="button" data-toggle="modal" data-target="#modal-add" class="btn btn-sm btn-secondary" name="button">+Tambah Data</button>
+                          <table id="saldo" class="table table-bordered">
+                            <thead>
+                            <tr>
+                              <th>No</th>
+                              <th>Tanggal</th>
+                              <th>Kuantiyas</th>
+                              <th>Mata Uang</th>
+                              <th>Syarat Pembayaran</th>
+                              <th>Nomor</th>
+                              <th>Keterangan</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>...</td>
+                              <td>...</td>
+                              <td>..</td>
+                              <td>..</td>
+                              <td>..</td>
+                            </tr>
+                          </table>
+                        </div>
+
+                        <div class="form-group row">
+                          <label for="posisi" class="col-sm-2 col-form-label">Kuantitas</label>
+                          <div class="col-sm-4">
+                            <input type="text" name="kuantitas" class="form-control" id="kuantitas" placeholder="Kuantitas">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="posisi" class="col-sm-2 col-form-label">Nilai Satuan</label>
+                          <div class="col-sm-4">
+                            <input type="text" name="nilaisatuan" class="form-control" id="nilaisatuan" placeholder="Kuantitas">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="posisi" class="col-sm-2 col-form-label">Beban Pokok</label>
+                          <div class="col-sm-4">
+                            <input type="text" name="bebanpokok" class="form-control" id="bebanpokok" placeholder="Beban pokok">
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="tab-pane container fade" id="lain2">
+                        <h4>Pembatasan Piutang Pelanggan</h4>
+                        <div class="form-group row">
+                          <div class="col-sm-4 offset-1">
+                            <label> <input type="checkbox" id="default"> Jika Ada faktur berumur lebih dari</label>
+                          </div>
+                          <div class="col-sm-1">
+                            <input type="text" name="hari" class="form-control" id="hari" placeholder="hari">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm-4 offset-1">
+                            <label> <input type="checkbox" id="default"> Jika total piutang & pesanan melebihi</label>
+                          </div>
+                          <div class="col-sm-1">
+                            <input type="text" name="hari" class="form-control" id="hari" placeholder="hari">
+                          </div>
+                        </div>
+                        <h4>Lain-lain</h4>
+                        <div class="form-group row">
+                          <label for="catatan" class="col-sm-3 col-form-label">Catatan</label>
+                          <div class="col-sm-3">
+                            <textarea name="lain2" class="form-control" id="lain2"></textarea>
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <div class="col-2 offset-2">
+                            <button type="button" class="btn btn-primary">Save</button>
+                          </div>
+                          <div class="col-2">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane container fade" id="akun">
                         <div class="row">
                           <div class="col">
                             <button type="button" data-toggle="modal" data-target="#modal-add" class="btn btn-sm btn-secondary" name="button">+Tambah Data</button>
@@ -497,15 +653,15 @@
                         </div>
 
                       </div>
-                      <div class="tab-pane container fade" id="pembelian">
+                      <div class="tab-pane container fade" id="gambar">
                         <form class="form-horizontal">
                           <div class="row">
-                            <div class="col-5">
+                            <div class="col-6">
                               <div class="form-group row">
-                                <label for="nama" class="col-sm-4 col-form-label">Syarat Pembayaran</label>
+                                <label for="nama" class="col-sm-5 col-form-label">Kategori Harga</label>
                                 <div class="col-sm-6">
                                   <div class="mb-3 input-group">
-                                    <input type="text" class="form-control" name="pembayaran" placeholder="...">
+                                    <input type="text" class="form-control" id="kat_harga" placeholder="...">
                                     <div class="input-group-append">
                                       <span class="input-group-text">
                                         <i class="fa fa-search"></i>
@@ -515,28 +671,79 @@
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label for="nama" class="col-sm-4 col-form-label">Default Deskripsi</label>
-                                <div class="col-sm-8">
-                                  <textarea name="deskripsi" rows="4" cols="30"></textarea>
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="nama" class="col-sm-4 col-form-label">Akun Hutang</label>
+                                <label for="nama" class="col-sm-5 col-form-label">Kategori diskon</label>
                                 <div class="col-sm-6">
                                   <div class="mb-3 input-group">
-                                    <input type="text" class="form-control" name="akunhutang" placeholder="...">
+                                    <input type="text" class="form-control" id="kat_diskon" placeholder="...">
                                     <div class="input-group-append">
                                       <span class="input-group-text">
                                         <i class="fa fa-search"></i>
                                       </span>
                                     </div>
                                   </div>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="nama" class="col-sm-5 col-form-label">Syarat Pembayaran</label>
+                                <div class="col-sm-6">
+                                  <div class="mb-3 input-group">
+                                    <input type="text" class="form-control" id="sayarat_bayar" placeholder="...">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text">
+                                        <i class="fa fa-search"></i>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="nama" class="col-sm-5 col-form-label">Default Penjual</label>
+                                <div class="col-sm-6">
+                                  <div class="mb-3 input-group">
+                                    <input type="text" class="form-control" id="default_penjual" placeholder="...">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text">
+                                        <i class="fa fa-search"></i>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="posisi" class="col-sm-5 col-form-label">Default diskon</label>
+                                <div class="col-sm-6">
+                                  <input type="text" name="diskon" class="form-control" id="diskon" placeholder="...">
                                 </div>
                               </div>
                             </div>
-                            <div class="col-7">
+                            <div class="col-6">
                               <div class="form-group row">
-                                <label for="nama" class="col-sm-3 col-form-label">Akun Uang Muka</label>
+                                <label for="email" class="col-sm-5 col-form-label">Default deskripsi</label>
+                                <div class="col-sm-6">
+                                  <input type="text" class="form-control" id="tlp" placeholder="...">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="website" class="col-sm-5 col-form-label">Konsinyasi</label>
+                                <div class="col-sm-7">
+                                  <label > <input type="checkbox"  id="konsinyasi"> Ya, perusahaan meniitpkan barang ke pelanggan ini</label>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="nama" class="col-sm-5 col-form-label">Akun Piutang</label>
+                                <div class="col-sm-6">
+                                  <div class="mb-3 input-group">
+                                    <input type="text" class="form-control" id="akun_piutang" placeholder="...">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text">
+                                        <i class="fa fa-search"></i>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="nama" class="col-sm-5 col-form-label">Akun Uang Muka</label>
                                 <div class="col-sm-6">
                                   <div class="mb-3 input-group">
                                     <input type="text" class="form-control" id="akun_uangmuka" placeholder="...">
@@ -549,32 +756,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="form-group row">
-                                <label for="nama" class="col-sm-3 col-form-label">Rekening Bank</label>
-                                <div class="col-sm-1">
-                                  <button class="btn btn-sm btn-primary"type="button" name="button">+</button>
-                                </div>
-                                <div class="col-sm-7">
-                                  <table class="table table-striped">
-                                    <thead>
-                                      <tr>
-                                        <th>#</th>
-                                        <th>No.Rekeing</th>
-                                        <th>Atas Nama</th>
-                                        <th>Nama Bank</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <td>1.</td>
-                                        <td>...</td>
-                                        <td>...</td>
-                                        <td>...</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
+
                             </div>
                           </div>
                           <div class="row">
@@ -591,9 +773,9 @@
                       </div>
                       <div class="tab-pane container fade" id="pajak">
                         <div class="form-group row">
-                          <label for="website" class="col-sm-2 col-form-label">Pajak</label>
+                          <label for="website" class="col-sm-2 col-form-label">Konsinyasi</label>
                           <div class="col-sm-7">
-                            <label > <input type="checkbox"  id="default"> Default Faktur sudah termasuk Pajak</label>
+                            <label > <input type="checkbox"  id="default"> Default total faktur sudah termsauk pajak</label>
                           </div>
                         </div>
                         <div class="form-group row">
@@ -624,12 +806,12 @@
                         <div class="form-group row">
                           <label for="penagihan" class="col-sm-2 col-form-label">Alamat Pajak</label>
                           <div class="col-sm-7">
-                            <label > <input type="checkbox"  id="almt"> Alamat pajak sama dengan alamat pembayaran</label>
+                            <label > <input type="checkbox"  id="almt"> Sama dengan alamat penagihan</label>
                           </div>
                         </div>
                         <div class="form-group row">
-
-                          <div class="col-sm-6 offset-2">
+                          <label for="bayarpotong" class="col-sm-2 col-form-label">Alamat Penagihan</label>
+                          <div class="col-sm-6">
                             <textarea class="form-control" id="alamat" name="alamat"></textarea>
                           </div>
                         </div>
@@ -661,129 +843,17 @@
                           </div>
                         </div>
                       </div>
-                      <div class="tab-pane container fade" id="saldo">
-                        <div class="form-group row">
-                          <button type="button" data-toggle="modal" data-target="#modal-add" class="btn btn-sm btn-secondary" name="button">+Tambah Data</button>
-                          <table id="saldo" class="table table-bordered">
-                            <thead>
-                            <tr>
-                              <th>No</th>
-                              <th>Tanggal</th>
-                              <th>Saldo awal</th>
-                              <th>Mata Uang</th>
-                              <th>Syarat Pembayaran</th>
-                              <th>Nomor</th>
-                              <th>Keterangan</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                              <td>1</td>
-                              <td>...</td>
-                              <td>...</td>
-                              <td>..</td>
-                              <td>..</td>
-                              <td>..</td>
-                            </tr>
-                          </table>
-                        </div>
-                      </div>
-                      <div class="tab-pane container fade" id="lain2">
-                        <h4>Pembatasan Piutang Pelanggan</h4>
-                        <h4>Lain-lain</h4>
-                        <div class="form-group row">
-                          <label for="catatan" class="col-sm-2 col-form-label">Catatan</label>
-                          <div class="col-sm-3">
-                            <textarea name="lain2" class="form-control" id="lain2"></textarea>
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="email" class="col-sm-2 col-form-label">Tipe Pemasok</label>
-                          <div class="col-sm-3">
-                            <select class="form-control" name="jenis_dokumen">
-                              <option value="">Pilih Tipe Pemasok</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <div class="col-1 offset-2">
-                            <button type="button" class="btn btn-primary">Save</button>
-                          </div>
-                          <div class="col-1">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                          </div>
-                        </div>
-                      </div>
+
+
                     </div>
-                    <!-- <form class="form-horizontal">
-                      <div class="card-body">
-                        <div class="form-group row">
-                          <label for="keteranganpajak" class="col-sm-4 col-form-label">Nama</label>
-                          <div class="col-sm-8">
-                            <input type="text" class="form-control" id="nama" placeholder="nama">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="pajak" class="col-sm-4 col-form-label">Type Gaji</label>
-                          <div class="col-sm-8">
-                            <select class="form-control" name="tipepajak">
-                              <option value="">--Pilih Default-</option>
-                              <option value="">Tunjangan jaminan kecelakaan kerja</option>
-                              <option value="">Tunjangan Pph</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="bayarpotong" class="col-sm-4 col-form-label">Bayar/Potong</label>
-                          <div class="col-sm-8">
-                            <input type="text" class="form-control" id="bayar" placeholder="bayar/potong">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="pajak" class="col-sm-4 col-form-label">Resiko</label>
-                          <div class="col-sm-8">
-                            <select class="form-control" name="tipepajak">
-                              <option value="">--Pilih Resiko-</option>
-                              <option value="">Resiko Rendah</option>
-                              <option value="">Resiko Sangat Tinggi</option>
-                            </select>
-                          </div>
-                          <div class="col-sm-4 offset-4 input-group">
-                            <input type="text" class="form-control" id="diskon" placeholder="...">
-                            <div class="input-group-append">
-                              <span class="input-group-text">
-                                %
-                              </span>
-                            </div>
-                          </div>
-                        </div>
 
-                        <div class="form-group row">
-                          <label for="jatuhtempo" class="col-sm-4 col-form-label">Akun Beban</label>
-                          <div class="col-sm-8 input-group">
-                            <input type="text" class="form-control" id="akunbeban" placeholder="cari akun beban...">
-                            <div class="input-group-append">
-                              <span class="input-group-text">
-                                <i class="fa fa-search"></i>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-
-
-                      </div>
-                      <div class="card-footer">
-                        <button type="button" class="btn btn-primary">Save</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                      </div>
-                    </form> -->
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="modal fade right" id="modal-editpemasok">
+        <div class="modal fade right" id="modal-editpelanggan">
           <div class="modal-dialog-full-width modal-dialog momodel modal-fluid">
             <div class="modal-content modal-content-full-width">
               <div class="modal-header modal-header-full-width text-center">
@@ -1259,11 +1329,45 @@
             </div>
           </div>
         </div>
+        <div class="modal fade right" id="modal-addsatuan">
+          <div class="modal-dialog momodel modal-fluid">
+            <div class="modal-content ">
+              <div class="modal-header text-center">
+                <h4 class="modal-title">Tambah Data satuan Barang</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="card card-primary card-tabs">
+                  <div class="card-header p-0 pt-1">
 
+                  </div>
+                  <div class="card-body">
+                    <form class="form-horizontal">
+                      <div class="card-body">
+                        <div class="form-group row">
+                          <label for="keteranganpajak" class="col-sm-4 col-form-label">Nama Satuan</label>
+                          <div class="col-sm-6">
+                            <input type="text" class="form-control" id="satuan" name="ssatuan" placeholder="nama satuan barang">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <button type="button" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="modal fade right" id="modal-addkategori">
-          <div class="modal-dialog-full-width modal-dialog momodel modal-fluid">
-            <div class="modal-content modal-content-full-width">
-              <div class="modal-header modal-header-full-width text-center">
+          <div class="modal-dialog momodel modal-fluid">
+            <div class="modal-content">
+              <div class="modal-header text-center">
                 <h4 class="modal-title">Tambah Data Kategori Pelanggan</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
@@ -1278,15 +1382,15 @@
                     <form class="form-horizontal">
                       <div class="card-body">
                         <div class="form-group row">
-                          <label for="keteranganpajak" class="col-sm-2 col-form-label">Nama Kategori</label>
-                          <div class="col-sm-5">
+                          <label class="col-sm-4 col-form-label">Nama Kategori</label>
+                          <div class="col-sm-6">
                             <input type="text" class="form-control" id="kategori" name="kategori" placeholder="nama kategori">
                           </div>
                         </div>
 
                         <div class="form-group row">
-                          <label for="bayarpotong" class="col-sm-2 col-form-label">Katgeori Default</label>
-                          <div class="col-sm-5">
+                          <label for="bayarpotong" class="col-sm-4 col-form-label">Katgeori Default</label>
+                          <div class="col-sm-6">
                             <label><input type="checkbox" name="default" id="default"> Ya </label>
                           </div>
                         </div>
