@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Accurate | Penawaran Penjualan</title>
+  <title>Accurate | Permintaan Barang</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -230,12 +230,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Penawaran Penjualan</h1>
+            <h1 class="m-0 text-dark">Permintaan Barang</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="penjualan.html">Penjualan</a></li>
-              <li class="breadcrumb-item active">Penawaran Penjualan</li>
+              <li class="breadcrumb-item"><a href="persediaan.html">Persediaan</a></li>
+              <li class="breadcrumb-item active">Permintaan Barang</li>
             </ol>
           </div>
         </div>
@@ -254,28 +254,26 @@
                 </div>
               </div>
               <div class="card-body">
-                <table id="penawaran" class="table table-bordered table-striped">
+                <table id="permintaan" class="table table-bordered table-striped">
                   <thead>
                   <tr>
                     <th>No</th>
                     <th>Nomor</th>
                     <th>Tanggal</th>
-                    <th>Pelanggan</th>
+                    <th>Tipe Permintaan</th>
                     <th>Keterangan</th>
                     <th>Status</th>
-                    <th>Total</th>
-                    <th>Opsi</th>
+                    <td>Opsi</td>
                   </tr>
                   </thead>
                   <tbody>
                   <tr>
                     <td>1</td>
-                    <td>nomor</td>
-                    <td>tgl</td>
-                    <td>pelanggan</td>
-                    <td>keterangan</td>
-                    <td>status</td>
-                    <td>total</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
                     <td>
                       <button data-toggle="modal" data-target="#modal-edit" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
                       <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
@@ -283,12 +281,11 @@
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td>nomor</td>
-                    <td>tgl</td>
-                    <td>pelanggan</td>
-                    <td>keterangan</td>
-                    <td>status</td>
-                    <td>total</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
                     <td>
                       <button data-toggle="modal" data-target="#modal-edit" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
                       <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
@@ -296,12 +293,11 @@
                   </tr>
                   <tr>
                     <td>3</td>
-                    <td>nomor</td>
-                    <td>tgl</td>
-                    <td>pelanggan</td>
-                    <td>keterangan</td>
-                    <td>status</td>
-                    <td>total</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
                     <td>
                       <button data-toggle="modal" data-target="#modal-edit" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
                       <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
@@ -317,7 +313,7 @@
           <div class="modal-dialog-full-width modal-dialog momodel modal-fluid">
             <div class="modal-content modal-content-full-width">
               <div class="modal-header modal-header-full-width text-center">
-                <h4 class="modal-title">Tambah Data Penawaran Penjualan</h4>
+                <h4 class="modal-title">Tambah Data Permintaan Barang</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -328,15 +324,16 @@
                     <form class="form-horizontal">
                     <div class="row">
                       <div class="col-5">
+
                         <div class="form-group row">
-                          <label for="diskon" class="col-sm-4 col-form-label">Dipesan Oleh</label>
-                          <div class="col-sm-6 input-group">
-                            <input type="text" class="form-control" id="dipesan" placeholder="...">
-                            <div class="input-group-append">
-                              <span class="input-group-text">
-                                %
-                              </span>
-                            </div>
+                          <label for="bayarpotong" class="col-sm-4 col-form-label">Nomor #</label>
+                          <div class="col-sm-1">
+                            <button type="button" class="btn btn-sm btn-secondary"><span class="fas fa-pen"></span></button>
+                          </div>
+                          <div class="col-sm-5">
+                            <select class="form-control" name="tipepajak">
+                              <option value="">Permintaan Pembelian</option>
+                            </select>
                           </div>
                         </div>
                           <div class="form-group row">
@@ -346,16 +343,14 @@
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label for="bayarpotong" class="col-sm-4 col-form-label">Nomor #</label>
-                            <div class="col-sm-1">
-                              <button type="button" class="btn btn-sm btn-secondary"><span class="fas fa-pen"></span></button>
-                            </div>
-                            <div class="col-sm-5">
-                              <select class="form-control" name="tipepajak">
-                                <option value="">Pencatatan Beban</option>
+                            <label for="tgl" class="col-sm-4 col-form-label">Tipe Permintaan</label>
+                            <div class="col-sm-6">
+                              <select type="text" name="tipe" class="form-control" id="tgl" placeholder="">
+                                <option value="">...</option>
                               </select>
                             </div>
                           </div>
+
 
                           <div class="form-group row">
                             <div class="col-sm-8">
@@ -384,19 +379,7 @@
                                 </button>
                               </div>
                             </div>
-                            <div class="col-sm-3">
-                              <div class="btn-group ml-2">
-                                <button type="button" class="btn btn-info">Proses</i></button>
-                                <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown">
-                                  <span class="sr-only">Toggle Dropdown</span>
-                                  <div class="dropdown-menu" role="menu">
-                                    <a class="dropdown-item" href="#">Pesanan</a>
-                                    <a class="dropdown-item" href="#">Pengiriman</a>
-                                    <a class="dropdown-item" href="#">Faktur</a>
-                                  </div>
-                                </button>
-                              </div>
-                            </div>
+
                           </div>
 
 
@@ -414,46 +397,19 @@
                               <th>Kode</th>
                               <th>Kuantitas</th>
                               <th>Satuan</th>
-                              <th>Harga</th>
-                              <th>Diskon</th>
-                              <th>Total Harga</th>
-                              <th>Pajak</th>
+                              <th>Tgl Diminta</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
                               <td>1</td>
-                              <td>Nama Barang</td>
-                              <td>Kode</td>
-                              <td>Kuantitas</td>
-                              <td>Satuan</td>
-                              <td>Harga</td>
-                              <td>Diskon</td>
-                              <td>Total Harga</td>
-                              <td>Pajak</td>
+                              <td>...</td>
+                              <td>...</td>
+                              <td>...</td>
+                              <td>...</td>
+                              <td>...</td>
                             </tr>
-                            <tr>
-                              <td>2</td>
-                              <td>Nama Barang</td>
-                              <td>Kode</td>
-                              <td>Kuantitas</td>
-                              <td>Satuan</td>
-                              <td>Harga</td>
-                              <td>Diskon</td>
-                              <td>Total Harga</td>
-                              <td>Pajak</td>
-                            </tr>
-                            <tr>
-                              <td>3</td>
-                              <td>Nama Barang</td>
-                              <td>Kode</td>
-                              <td>Kuantitas</td>
-                              <td>Satuan</td>
-                              <td>Harga</td>
-                              <td>Diskon</td>
-                              <td>Total Harga</td>
-                              <td>Pajak</td>
-                            </tr>
+
                           </table>
 
                       </div>
@@ -467,11 +423,11 @@
           </div>
         </div>
 
-        <div class="modal fade right" id="modal-edit">
+        <div class="modal fade right" id="modal-add">
           <div class="modal-dialog-full-width modal-dialog momodel modal-fluid">
             <div class="modal-content modal-content-full-width">
               <div class="modal-header modal-header-full-width text-center">
-                <h4 class="modal-title">Edit Data Penawaran Penjualan</h4>
+                <h4 class="modal-title">Edit Data Permintaan Barang</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -482,15 +438,16 @@
                     <form class="form-horizontal">
                     <div class="row">
                       <div class="col-5">
+
                         <div class="form-group row">
-                          <label for="diskon" class="col-sm-4 col-form-label">Dipesan Oleh</label>
-                          <div class="col-sm-6 input-group">
-                            <input type="text" class="form-control" id="dipesan" placeholder="...">
-                            <div class="input-group-append">
-                              <span class="input-group-text">
-                                %
-                              </span>
-                            </div>
+                          <label for="bayarpotong" class="col-sm-4 col-form-label">Nomor #</label>
+                          <div class="col-sm-1">
+                            <button type="button" class="btn btn-sm btn-secondary"><span class="fas fa-pen"></span></button>
+                          </div>
+                          <div class="col-sm-5">
+                            <select class="form-control" name="tipepajak">
+                              <option value="">Permintaan Pembelian</option>
+                            </select>
                           </div>
                         </div>
                           <div class="form-group row">
@@ -500,16 +457,14 @@
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label for="bayarpotong" class="col-sm-4 col-form-label">Nomor #</label>
-                            <div class="col-sm-1">
-                              <button type="button" class="btn btn-sm btn-secondary"><span class="fas fa-pen"></span></button>
-                            </div>
-                            <div class="col-sm-5">
-                              <select class="form-control" name="tipepajak">
-                                <option value="">Pencatatan Beban</option>
+                            <label for="tgl" class="col-sm-4 col-form-label">Tipe Permintaan</label>
+                            <div class="col-sm-6">
+                              <select type="text" name="tipe" class="form-control" id="tgl" placeholder="">
+                                <option value="">...</option>
                               </select>
                             </div>
                           </div>
+
 
                           <div class="form-group row">
                             <div class="col-sm-8">
@@ -538,19 +493,7 @@
                                 </button>
                               </div>
                             </div>
-                            <div class="col-sm-3">
-                              <div class="btn-group ml-2">
-                                <button type="button" class="btn btn-info">Proses</i></button>
-                                <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown">
-                                  <span class="sr-only">Toggle Dropdown</span>
-                                  <div class="dropdown-menu" role="menu">
-                                    <a class="dropdown-item" href="#">Pesanan</a>
-                                    <a class="dropdown-item" href="#">Pengiriman</a>
-                                    <a class="dropdown-item" href="#">Faktur</a>
-                                  </div>
-                                </button>
-                              </div>
-                            </div>
+
                           </div>
 
 
@@ -568,46 +511,19 @@
                               <th>Kode</th>
                               <th>Kuantitas</th>
                               <th>Satuan</th>
-                              <th>Harga</th>
-                              <th>Diskon</th>
-                              <th>Total Harga</th>
-                              <th>Pajak</th>
+                              <th>Tgl Diminta</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
                               <td>1</td>
-                              <td>Nama Barang</td>
-                              <td>Kode</td>
-                              <td>Kuantitas</td>
-                              <td>Satuan</td>
-                              <td>Harga</td>
-                              <td>Diskon</td>
-                              <td>Total Harga</td>
-                              <td>Pajak</td>
+                              <td>...</td>
+                              <td>...</td>
+                              <td>...</td>
+                              <td>...</td>
+                              <td>...</td>
                             </tr>
-                            <tr>
-                              <td>2</td>
-                              <td>Nama Barang</td>
-                              <td>Kode</td>
-                              <td>Kuantitas</td>
-                              <td>Satuan</td>
-                              <td>Harga</td>
-                              <td>Diskon</td>
-                              <td>Total Harga</td>
-                              <td>Pajak</td>
-                            </tr>
-                            <tr>
-                              <td>3</td>
-                              <td>Nama Barang</td>
-                              <td>Kode</td>
-                              <td>Kuantitas</td>
-                              <td>Satuan</td>
-                              <td>Harga</td>
-                              <td>Diskon</td>
-                              <td>Total Harga</td>
-                              <td>Pajak</td>
-                            </tr>
+
                           </table>
 
                       </div>
@@ -620,6 +536,8 @@
             </div>
           </div>
         </div>
+
+
       </div>
     </section>
 
@@ -646,58 +564,111 @@
 <!-- jQuery UI 1.11.4 -->
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- ChartJS -->
 <script src="plugins/chart.js/Chart.min.js"></script>
 <!-- Sparkline -->
 <script src="plugins/sparklines/sparkline.js"></script>
-
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
 <!-- jQuery Knob Chart -->
 <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
 <script src="plugins/moment/moment.min.js"></script>
 <script src="plugins/daterangepicker/daterangepicker.js"></script>
-
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
 <script src="plugins/datatables/jquery.dataTables.js"></script>
-<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
-<script src="plugins/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
 <script type="text/javascript">
-jQuery('#tgl').datetimepicker({
-  timepicker:false
-});
-
-jQuery('#tempo').datetimepicker({
-  timepicker:false
-});
-
 $(function () {
-  $("#penawaran").DataTable({
-    dom: 'Bfrtip',
-        buttons: [
-            'print'
-        ],
-        'bFilter': true
-
-
+  $("#proyek").DataTable();
 
   });
-  $("#akun").DataTable();
 
-});
+    var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
+    var donutData        = {
+      labels: [
+          // 'Chrome',
+          //
+          // 'Navigator',
+      ],
+      datasets: [
+        {
+          data: [700,100],
+          backgroundColor : ['#3c8dbc',  '#d2d6de'],
+        }
+      ]
+    }
+    var donutOptions     = {
+      maintainAspectRatio : false,
+      responsive : true,
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    var donutChart = new Chart(donutChartCanvas, {
+      type: 'doughnut',
+      data: donutData,
+      options: donutOptions
+    })
 
+    var donutChartCanvas = $('#donutChart2').get(0).getContext('2d')
+    var donutData        = {
+      labels: [
+          'Bulan lalu',
+          'Tahun lalu',
+      ],
+      datasets: [
+        {
+          data: [500,400],
+          backgroundColor : ['#00a65a', '#f39c12'],
+        }
+      ]
+    }
+    var donutOptions     = {
+      maintainAspectRatio : false,
+      responsive : true,
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    var donutChart = new Chart(donutChartCanvas, {
+      type: 'doughnut',
+      data: donutData,
+      options: donutOptions
+    })
 
+    //-------------
+    //- PIE CHART -
+    //-------------
+    // Get context with jQuery - using jQuery's .get() method.
+    var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
+    var pieData        = donutData;
+    var pieOptions     = {
+      maintainAspectRatio : false,
+      responsive : true,
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    var pieChart = new Chart(pieChartCanvas, {
+      type: 'pie',
+      data: pieData,
+      options: pieOptions
+    })
 </script>
 </body>
 </html>

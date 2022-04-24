@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Accurate | Penawaran Penjualan</title>
+  <title>Accurate | Perintah Stok Opname</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -230,12 +230,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Penawaran Penjualan</h1>
+            <h1 class="m-0 text-dark">Perintah Stok Opname</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="penjualan.html">Penjualan</a></li>
-              <li class="breadcrumb-item active">Penawaran Penjualan</li>
+              <li class="breadcrumb-item"><a href="persediaan.html">Persediaan</a></li>
+              <li class="breadcrumb-item active">Perintah Stok Opname</li>
             </ol>
           </div>
         </div>
@@ -258,24 +258,26 @@
                   <thead>
                   <tr>
                     <th>No</th>
-                    <th>Nomor</th>
                     <th>Tanggal</th>
-                    <th>Pelanggan</th>
-                    <th>Keterangan</th>
+                    <th>Nomor</th>
+                    <th>Tgl Mulai</th>
+                    <th>Gudang</th>
                     <th>Status</th>
-                    <th>Total</th>
+                    <th>Keterangan</th>
+                    <th>Penanggung Jawab</th>
                     <th>Opsi</th>
                   </tr>
                   </thead>
                   <tbody>
                   <tr>
                     <td>1</td>
-                    <td>nomor</td>
-                    <td>tgl</td>
-                    <td>pelanggan</td>
-                    <td>keterangan</td>
-                    <td>status</td>
-                    <td>total</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
                     <td>
                       <button data-toggle="modal" data-target="#modal-edit" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
                       <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
@@ -283,12 +285,13 @@
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td>nomor</td>
-                    <td>tgl</td>
-                    <td>pelanggan</td>
-                    <td>keterangan</td>
-                    <td>status</td>
-                    <td>total</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
                     <td>
                       <button data-toggle="modal" data-target="#modal-edit" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
                       <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
@@ -296,12 +299,13 @@
                   </tr>
                   <tr>
                     <td>3</td>
-                    <td>nomor</td>
-                    <td>tgl</td>
-                    <td>pelanggan</td>
-                    <td>keterangan</td>
-                    <td>status</td>
-                    <td>total</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
                     <td>
                       <button data-toggle="modal" data-target="#modal-edit" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
                       <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
@@ -317,7 +321,7 @@
           <div class="modal-dialog-full-width modal-dialog momodel modal-fluid">
             <div class="modal-content modal-content-full-width">
               <div class="modal-header modal-header-full-width text-center">
-                <h4 class="modal-title">Tambah Data Penawaran Penjualan</h4>
+                <h4 class="modal-title">Tambah Data Perintah Stok Opname</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -327,135 +331,122 @@
                   <div class="col">
                     <form class="form-horizontal">
                     <div class="row">
-                      <div class="col-5">
+                      <div class="col-6">
                         <div class="form-group row">
-                          <label for="diskon" class="col-sm-4 col-form-label">Dipesan Oleh</label>
+                          <label for="diskon" class="col-sm-4 col-form-label">No.SPK</label>
                           <div class="col-sm-6 input-group">
-                            <input type="text" class="form-control" id="dipesan" placeholder="...">
                             <div class="input-group-append">
-                              <span class="input-group-text">
-                                %
-                              </span>
+                              <button class="btn btn-secondary" type="button" name="button">
+                                <i class="fas fa-pen"></i>
+                              </button>
+                            </div>
+                            <select class="form-control" name="nofaktur">
+                              <option value="">Pilih</option>
+                              <option value="">Pengiriman pesanan cabang Cahyo</option>
+                              <option value="">Pengiriman pesanan cabang BSD</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label for="diskon" class="col-sm-4 col-form-label">Tgl SPK</label>
+                          <div class="col-sm-6 input-group">
+                            <input type="text" class="form-control" id="kirimke" placeholder="Cari/Pilih Pelanggan">
+
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label for="diskon" class="col-sm-4 col-form-label">Cabang</label>
+                          <div class="col-sm-6 input-group">
+                            <select class="form-control" name="nofaktur">
+                              <option value="">Pilih</option>
+                              <option value="">Kantor Pusat</option>
+                              <option value="">cabang BSD</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="diskon" class="col-sm-4 col-form-label">Departemen</label>
+                          <div class="col-sm-6 input-group">
+                            <input type="text" class="form-control" id="kirimke" placeholder="Cari/Pilih Pelanggan">
+                            <div class="input-group-append">
+                              <button class="btn btn-secondary" type="button" name="button">
+                                <i class="fas fa-search"></i>
+                              </button>
                             </div>
                           </div>
                         </div>
                           <div class="form-group row">
-                            <label for="tgl" class="col-sm-4 col-form-label">Tanggal</label>
+                            <label for="pajak" class="col-sm-4 col-form-label">Tanggal Mulai</label>
                             <div class="col-sm-6">
-                              <input type="text" name="tgl" class="form-control" id="tgl" placeholder="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="bayarpotong" class="col-sm-4 col-form-label">Nomor #</label>
-                            <div class="col-sm-1">
-                              <button type="button" class="btn btn-sm btn-secondary"><span class="fas fa-pen"></span></button>
-                            </div>
-                            <div class="col-sm-5">
-                              <select class="form-control" name="tipepajak">
-                                <option value="">Pencatatan Beban</option>
-                              </select>
+                              <input type="text" name="tanggal" class="form-control" id="tanggal" placeholder="">
                             </div>
                           </div>
 
                           <div class="form-group row">
-                            <div class="col-sm-8">
-                              <div class="input-group">
-                                <div class="custom-file">
-                                  <input type="file" class="custom-file-input" id="exampleInputFile">
-                                  <label class="custom-file-label" for="exampleInputFile">Dokumen</label>
-                                </div>
-                                <div class="input-group-append">
-                                  <span class="input-group-text" id=""><i class="fas fa-file"></i></span>
-                                </div>
-                              </div>
+                            <label for="diskon" class="col-sm-4 col-form-label">Keterangan</label>
+                            <div class="col-sm-6 input-group">
+                              <textarea name="name" rows="3" cols="40"></textarea>
                             </div>
-
-                          </div>
-                          <div class="form-group row">
-                            <div class="col-sm-3">
-                              <div class="btn-group ml-2">
-                                <button type="button" class="btn btn-success">Ambil</i></button>
-                                <button type="button" class="btn btn-success dropdown-toggle dropdown-icon" data-toggle="dropdown">
-                                  <span class="sr-only">Toggle Dropdown</span>
-                                  <div class="dropdown-menu" role="menu">
-                                    <a class="dropdown-item" href="#">Favorit</a>
-
-                                  </div>
-                                </button>
-                              </div>
-                            </div>
-                            <div class="col-sm-3">
-                              <div class="btn-group ml-2">
-                                <button type="button" class="btn btn-info">Proses</i></button>
-                                <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown">
-                                  <span class="sr-only">Toggle Dropdown</span>
-                                  <div class="dropdown-menu" role="menu">
-                                    <a class="dropdown-item" href="#">Pesanan</a>
-                                    <a class="dropdown-item" href="#">Pengiriman</a>
-                                    <a class="dropdown-item" href="#">Faktur</a>
-                                  </div>
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-
-
-                          <div class="card-footer">
-                            <button type="button" class="btn btn-primary">Save</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                           </div>
                       </div>
-                      <div class="col-7">
-                          <table id="akun" class="table table-bordered">
-                            <thead>
-                            <tr>
-                              <th>No</th>
-                              <th>Nama Barang</th>
-                              <th>Kode</th>
-                              <th>Kuantitas</th>
-                              <th>Satuan</th>
-                              <th>Harga</th>
-                              <th>Diskon</th>
-                              <th>Total Harga</th>
-                              <th>Pajak</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                              <td>1</td>
-                              <td>Nama Barang</td>
-                              <td>Kode</td>
-                              <td>Kuantitas</td>
-                              <td>Satuan</td>
-                              <td>Harga</td>
-                              <td>Diskon</td>
-                              <td>Total Harga</td>
-                              <td>Pajak</td>
-                            </tr>
-                            <tr>
-                              <td>2</td>
-                              <td>Nama Barang</td>
-                              <td>Kode</td>
-                              <td>Kuantitas</td>
-                              <td>Satuan</td>
-                              <td>Harga</td>
-                              <td>Diskon</td>
-                              <td>Total Harga</td>
-                              <td>Pajak</td>
-                            </tr>
-                            <tr>
-                              <td>3</td>
-                              <td>Nama Barang</td>
-                              <td>Kode</td>
-                              <td>Kuantitas</td>
-                              <td>Satuan</td>
-                              <td>Harga</td>
-                              <td>Diskon</td>
-                              <td>Total Harga</td>
-                              <td>Pajak</td>
-                            </tr>
-                          </table>
+                      <div class="col-6">
+                        <div class="form-group row">
+                          <label for="diskon" class="col-sm-4 col-form-label">Gudang</label>
+                          <div class="col-sm-6 input-group">
+                            <input type="text" class="form-control" id="kirimke" placeholder="Cari/Pilih Pelanggan">
+                            <div class="input-group-append">
+                              <button class="btn btn-secondary" type="button" name="button">
+                                <i class="fas fa-search"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="diskon" class="col-sm-4 col-form-label">Kategori Barang</label>
+                          <div class="col-sm-6 input-group">
+                            <input type="text" class="form-control" id="kirimke" placeholder="Cari/Pilih Pelanggan">
+                            <div class="input-group-append">
+                              <button class="btn btn-secondary" type="button" name="button">
+                                <i class="fas fa-search"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="diskon" class="col-sm-4 col-form-label">Pemasok Barang</label>
+                          <div class="col-sm-6 input-group">
+                            <input type="text" class="form-control" id="kirimke" placeholder="Cari/Pilih Pelanggan">
+                            <div class="input-group-append">
+                              <button class="btn btn-secondary" type="button" name="button">
+                                <i class="fas fa-search"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="pajak" class="col-sm-4 col-form-label">Penangung Jawab</label>
+                          <div class="col-sm-6">
+                            <input type="text" name="tanggal" class="form-control" id="tanggal" placeholder="">
+                          </div>
+                        </div>
 
+                        <div class="form-group row">
+                          <label for="diskon" class="col-sm-4 col-form-label">Dikerjakan Oleh</label>
+                          <div class="col-sm-6 input-group">
+                            <input type="text" class="form-control" id="kirimke" placeholder="Cari/Pilih Pelanggan">
+                            <div class="input-group-append">
+                              <button class="btn btn-secondary" type="button" name="button">
+                                <i class="fas fa-search"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-footer">
+                          <button type="button" class="btn btn-primary">Save</button>
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
                       </div>
                     </div>
                     </form>
@@ -467,159 +458,7 @@
           </div>
         </div>
 
-        <div class="modal fade right" id="modal-edit">
-          <div class="modal-dialog-full-width modal-dialog momodel modal-fluid">
-            <div class="modal-content modal-content-full-width">
-              <div class="modal-header modal-header-full-width text-center">
-                <h4 class="modal-title">Edit Data Penawaran Penjualan</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col">
-                    <form class="form-horizontal">
-                    <div class="row">
-                      <div class="col-5">
-                        <div class="form-group row">
-                          <label for="diskon" class="col-sm-4 col-form-label">Dipesan Oleh</label>
-                          <div class="col-sm-6 input-group">
-                            <input type="text" class="form-control" id="dipesan" placeholder="...">
-                            <div class="input-group-append">
-                              <span class="input-group-text">
-                                %
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                          <div class="form-group row">
-                            <label for="tgl" class="col-sm-4 col-form-label">Tanggal</label>
-                            <div class="col-sm-6">
-                              <input type="text" name="tgl" class="form-control" id="tgl" placeholder="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="bayarpotong" class="col-sm-4 col-form-label">Nomor #</label>
-                            <div class="col-sm-1">
-                              <button type="button" class="btn btn-sm btn-secondary"><span class="fas fa-pen"></span></button>
-                            </div>
-                            <div class="col-sm-5">
-                              <select class="form-control" name="tipepajak">
-                                <option value="">Pencatatan Beban</option>
-                              </select>
-                            </div>
-                          </div>
 
-                          <div class="form-group row">
-                            <div class="col-sm-8">
-                              <div class="input-group">
-                                <div class="custom-file">
-                                  <input type="file" class="custom-file-input" id="exampleInputFile">
-                                  <label class="custom-file-label" for="exampleInputFile">Dokumen</label>
-                                </div>
-                                <div class="input-group-append">
-                                  <span class="input-group-text" id=""><i class="fas fa-file"></i></span>
-                                </div>
-                              </div>
-                            </div>
-
-                          </div>
-                          <div class="form-group row">
-                            <div class="col-sm-3">
-                              <div class="btn-group ml-2">
-                                <button type="button" class="btn btn-success">Ambil</i></button>
-                                <button type="button" class="btn btn-success dropdown-toggle dropdown-icon" data-toggle="dropdown">
-                                  <span class="sr-only">Toggle Dropdown</span>
-                                  <div class="dropdown-menu" role="menu">
-                                    <a class="dropdown-item" href="#">Favorit</a>
-
-                                  </div>
-                                </button>
-                              </div>
-                            </div>
-                            <div class="col-sm-3">
-                              <div class="btn-group ml-2">
-                                <button type="button" class="btn btn-info">Proses</i></button>
-                                <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown">
-                                  <span class="sr-only">Toggle Dropdown</span>
-                                  <div class="dropdown-menu" role="menu">
-                                    <a class="dropdown-item" href="#">Pesanan</a>
-                                    <a class="dropdown-item" href="#">Pengiriman</a>
-                                    <a class="dropdown-item" href="#">Faktur</a>
-                                  </div>
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-
-
-                          <div class="card-footer">
-                            <button type="button" class="btn btn-primary">Save</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                          </div>
-                      </div>
-                      <div class="col-7">
-                          <table id="akun" class="table table-bordered">
-                            <thead>
-                            <tr>
-                              <th>No</th>
-                              <th>Nama Barang</th>
-                              <th>Kode</th>
-                              <th>Kuantitas</th>
-                              <th>Satuan</th>
-                              <th>Harga</th>
-                              <th>Diskon</th>
-                              <th>Total Harga</th>
-                              <th>Pajak</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                              <td>1</td>
-                              <td>Nama Barang</td>
-                              <td>Kode</td>
-                              <td>Kuantitas</td>
-                              <td>Satuan</td>
-                              <td>Harga</td>
-                              <td>Diskon</td>
-                              <td>Total Harga</td>
-                              <td>Pajak</td>
-                            </tr>
-                            <tr>
-                              <td>2</td>
-                              <td>Nama Barang</td>
-                              <td>Kode</td>
-                              <td>Kuantitas</td>
-                              <td>Satuan</td>
-                              <td>Harga</td>
-                              <td>Diskon</td>
-                              <td>Total Harga</td>
-                              <td>Pajak</td>
-                            </tr>
-                            <tr>
-                              <td>3</td>
-                              <td>Nama Barang</td>
-                              <td>Kode</td>
-                              <td>Kuantitas</td>
-                              <td>Satuan</td>
-                              <td>Harga</td>
-                              <td>Diskon</td>
-                              <td>Total Harga</td>
-                              <td>Pajak</td>
-                            </tr>
-                          </table>
-
-                      </div>
-                    </div>
-                    </form>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -674,25 +513,14 @@
 <script src="dist/js/demo.js"></script>
 <script src="plugins/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
 <script type="text/javascript">
-jQuery('#tgl').datetimepicker({
-  timepicker:false
-});
+jQuery('#tanggal').datetimepicker();
 
 jQuery('#tempo').datetimepicker({
   timepicker:false
 });
 
 $(function () {
-  $("#penawaran").DataTable({
-    dom: 'Bfrtip',
-        buttons: [
-            'print'
-        ],
-        'bFilter': true
-
-
-
-  });
+  $("#penawaran").DataTable();
   $("#akun").DataTable();
 
 });
