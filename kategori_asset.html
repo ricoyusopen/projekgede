@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Accurate | Kategori Asset</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <style media="screen">
+  .modal-dialog-full-width {
+      width: 90% !important;
+      height: 90% !important;
+      margin: auto !important;
+      padding: 0 !important;
+      max-width:none !important;
+  }
+
+  .modal-content-full-width  {
+      height: auto !important;
+      min-height: 90% !important;
+      border-radius: 0 !important;
+      background-color: #FFF !important
+  }
+
+  .modal-header-full-width  {
+      border-bottom: 1px solid #9ea2a2 !important;
+  }
+
+  .modal-footer-full-width  {
+      border-top: 1px solid #9ea2a2 !important;
+  }
+  </style>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifikasi</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 4 Data Pembelian Baru
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 Data Karyawan Baru
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 Data Laporan Baru
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">Lihat Semua Notifikasi</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-user-circle"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <div class="media">
+              <img src="asset/profil.png" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Some One
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">My Profile</p>
+              </div>
+            </div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">Log Out</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="asset/logoaccurate2.png" alt="Accurate Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">New Accurate</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+
+        <div class="info">
+          <a href="#" class="d-block">Tanggal Here</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+         <li class="nav-item">
+           <a href="dashboard.html" class="nav-link bg-dark">
+             <i class="nav-icon fas fa-th"></i>
+             <p> Dashboard</p>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a href="perusahaan.html" class="nav-link bg-dark">
+             <i class="nav-icon fas fa-th"></i>
+             <p> Perusahaan</p>
+           </a>
+         </li>
+          <li class="nav-item ">
+            <a href="bukubesar.html" class="nav-link bg-dark">
+              <i class="nav-icon fas fa-th"></i>
+              <p> Buku Besar</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="kas.html" class="nav-link bg-dark">
+              <i class="nav-icon fas fa-th"></i>
+              <p>Kas & Bank</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="penjualan.html" class="nav-link bg-dark">
+              <i class="nav-icon fas fa-th"></i>
+              <p> Penjualan</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="pembelian.html" class="nav-link bg-dark">
+              <i class="nav-icon fas fa-th"></i>
+              <p> Pembelian</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="persediaan.html" class="nav-link bg-dark">
+              <i class="nav-icon fas fa-th"></i>
+              <p> Persediaan</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="asset.html" class="nav-link bg-dark">
+              <i class="nav-icon fas fa-th"></i>
+              <p> Asset</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="smartlink_tax.html" class="nav-link bg-dark">
+              <i class="nav-icon fas fa-th"></i>
+              <p> smartlink_tax Tax</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="laporan.html" class="nav-link bg-dark">
+              <i class="nav-icon fas fa-th"></i>
+              <p> Daftar Laporan</p>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+
+  </aside>
+
+  <div class="content-wrapper">
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Kategori Asset</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="asset.html">Asset</a></li>
+              <li class="breadcrumb-item active">Kategori Asset</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-primary">
+              <div class="card-header">
+                <button type="button" data-toggle="modal" data-target="#modal-addkategori" class="btn btn-primary" name="button">+Tambah Data</button>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </div>
+              </div>
+              <div class="card-body">
+                <table id="retur" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Tarif Penyusutan(%)</th>
+                    <th>Nama</th>
+                    <th>Perkiraan Umur(tahun)</th>
+                    <th>Metode Penyusutan</th>
+                    <th>Opsi</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>
+                      <button data-toggle="modal" data-target="#modal-editkategori" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
+                      <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
+                    </td>
+                  </tr>
+
+                </table>
+              </div>
+            </div>
+
+            <!-- <div class="card card-primary">
+              <div class="card-header">
+                <button type="button" data-toggle="modal" data-target="#modal-add" class="btn btn-primary" name="button">+Tambah Data</button>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </div>
+              </div>
+              <div class="card-body">
+                <table id="retur" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>ID Pelanggan</th>
+                    <th>Kontak Utama</th>
+                    <th>Nomor WA</th>
+                    <th>Saldo</th>
+                    <th>Opsi</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Nama</td>
+                    <td>ID Pelanggan</td>
+                    <td>Kontak Utama</td>
+                    <td>Nomor WA</td>
+                    <td>Saldo</td>
+
+                    <td>
+                      <button data-toggle="modal" data-target="#modal-edit" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
+                      <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Nama</td>
+                    <td>ID Pelanggan</td>
+                    <td>Kontak Utama</td>
+                    <td>Nomor WA</td>
+                    <td>Saldo</td>
+                    <td>
+                      <button data-toggle="modal" data-target="#modal-edit" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
+                      <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Nama</td>
+                    <td>ID Pelanggan</td>
+                    <td>Kontak Utama</td>
+                    <td>Nomor WA</td>
+                    <td>Saldo</td>
+                    <td>
+                      <button data-toggle="modal" data-target="#modal-edit" type="button" class="btn btn-xs btn-secondary" name="button"><i class="fa fa-pencil"></i> Edit</button>
+                      <button onclick="konfirmasi()" type="button" class="btn btn-xs btn-default" name="button"><i class="far fa-pencil"></i> Hapus</button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="modal fade right" id="modal-addkategori">
+          <div class="modal-dialog momodel modal-fluid">
+            <div class="modal-content">
+              <div class="modal-header text-center">
+                <h4 class="modal-title">Tambah Data Kategori</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="card card-primary card-tabs">
+
+
+                    <form class="form-horizontal">
+                      <div class="card-body">
+                        <div class="form-group row">
+                          <label for="keteranganpajak" class="col-sm-4 col-form-label">Nama Kategori</label>
+                          <div class="col-sm-8">
+                            <input type="text" class="form-control" id="kategori" name="kategori" placeholder="nama kategori">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="keteranganpajak" class="col-sm-4 col-form-label">Metode Penyusutan</label>
+                          <div class="col-sm-8">
+                            <select class="form-control" name="kategori">
+                              <option value="Tidak Terdepresiasi">Tidak Terdepresiasi</option>
+                              <option value="Metode Garis Lurus">Metode Garis Lurus</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="keteranganpajak" class="col-sm-4 col-form-label">Perkiraan Umur</label>
+                          <div class="col-sm-2">
+                            <input type="text" class="form-control" id="umur" name="umur">
+                          </div>
+                          <div class="col-sm-2">
+                            tahun
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="bayarpotong" class="col-sm-4 col-form-label">Tarif Penyusutan</label>
+                          <div class="col-sm-8">
+                            <label>0 % </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <button type="button" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                      </div>
+                    </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade right" id="modal-editkategori">
+          <div class="modal-dialog-full-width modal-dialog momodel modal-fluid">
+            <div class="modal-content modal-content-full-width">
+              <div class="modal-header modal-header-full-width text-center">
+                <h4 class="modal-title">Edit Data Kategori Pelanggan</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="card card-primary card-tabs">
+                  <div class="card-header p-0 pt-1">
+
+                  </div>
+                  <div class="card-body">
+                    <form class="form-horizontal">
+                      <div class="card-body">
+                        <div class="form-group row">
+                          <label for="keteranganpajak" class="col-sm-2 col-form-label">Nama Kategori</label>
+                          <div class="col-sm-5">
+                            <input type="text" class="form-control" id="kategori" name="kategori" placeholder="nama kategori">
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label for="bayarpotong" class="col-sm-2 col-form-label">Katgeori Default</label>
+                          <div class="col-sm-5">
+                            <label><input type="checkbox" name="default" id="default"> Ya </label>
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <div class="col-sm-5">
+                            <label><input type="checkbox" name="sub" id="sub"> Sub Kategori </label>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="card-footer">
+                        <button type="button" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="main-footer">
+    <strong>2020 <a href="#">PT.XYZ</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.0.1
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<script src="plugins/datatables/jquery.dataTables.js"></script>
+<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<script src="plugins/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
+<script type="text/javascript">
+jQuery('#tgl').datetimepicker({
+  timepicker:false
+});
+
+jQuery('#tempo').datetimepicker({
+  timepicker:false
+});
+
+$(function () {
+  $("#penawaran").DataTable({
+    dom: 'Bfrtip',
+        buttons: [
+            'print'
+        ],
+        'bFilter': true
+
+
+
+  });
+  $("#akun").DataTable();
+
+});
+
+
+</script>
+</body>
+</html>
